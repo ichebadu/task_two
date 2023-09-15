@@ -1,0 +1,6 @@
+
+server:
+  port: 8045
+
+application:
+  name: user-service
