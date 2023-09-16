@@ -17,15 +17,15 @@ public class UserController {
         System.out.println(userRequest);
         return userService.addUser(userRequest);
     }
-    @PutMapping("/api/{user_id}")
+    @PutMapping("/{user_id}")
     public UserResponse updateUser(@PathVariable ("user_id") String identifier, @RequestBody UserRequest userRequest){
         return userService.updateUser(identifier,userRequest);
     }
-    @DeleteMapping("/api/{user_id}")
+    @DeleteMapping("/{user_id}")
     public String deleteUser(@PathVariable ("user_id") String identifier){
         return userService.deleteUser(identifier);
     }
-    @GetMapping("/api/{user_id}")
+    @GetMapping("/{user_id}")
     public UserResponse findUser(@PathVariable ("user_id") String identifier){
         return userService.findUser(identifier);
     }
