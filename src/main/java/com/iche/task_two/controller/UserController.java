@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api")
 public class UserController {
     private final UserService userService;
 
-    @PostMapping("/api")
+    @PostMapping()
     public UserResponse createUser(@RequestBody UserRequest userRequest){
         System.out.println(userRequest);
         return userService.addUser(userRequest);

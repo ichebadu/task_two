@@ -64,4 +64,3 @@ jobs:
           dockerfile: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/task_two:${{github.sha}}
-
